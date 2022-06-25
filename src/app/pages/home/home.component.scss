@@ -1,0 +1,53 @@
+.background {
+  background: url('../../../assets/images/background-1.png');
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
+}
+
+.heading {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.download-img {
+  img {
+    width: 150px;
+    height: 48px;
+  }
+}
+
+.label {
+  font-weight: 600;
+  color: #979696;
+}
+
+.right-col {
+  padding: 50px;
+}
+
+@media (max-width: 769px) {
+  .right-col {
+    order: 1;
+  }
+
+  .left-col {
+    order: 2;
+    text-align: center;
+    padding: 60px;
+  }
+
+  .background {
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+  }
+
+  .download-img {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+}

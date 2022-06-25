@@ -1,0 +1,39 @@
+<form class="row g-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="col-auto align-self-center">
+    <label class="visually-hidden">Username</label>
+    <input
+      type="text"
+      class="form-control custom-control"
+      formControlName="username"
+    />
+
+    <div *ngIf="username?.touched && username?.invalid" class="error">
+      Username is invalid
+    </div>
+  </div>
+
+  <div class="col-auto align-self-center">
+    <label class="visually-hidden"> Mobile </label>
+
+    <div class="custom-control d-flex custom-input">
+      <span class="d-flex align-items-center">+91 -</span>
+
+      <input
+        type="text"
+        class="form-control custom-control"
+        formControlName="mobile"
+      />
+    </div>
+
+    <div *ngIf="mobile?.touched && mobile?.invalid" class="error">
+      Mobile is invalid
+    </div>
+  </div>
+
+  <div class="col-auto align-self-center">
+    <button type="submit" class="btn btn-get-link" [disabled]="form.invalid">
+      Get Link
+    </button>
+  </div>
+</form>
+
